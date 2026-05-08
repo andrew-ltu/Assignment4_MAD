@@ -1,51 +1,47 @@
 import { ACTIVITY_DATA } from '@/activityData/activityData';
+import Act1Record from '@/components/Act1/Act1Record';
+import Act2Record from '@/components/Act2/Act2Record';
+import Act3Record from '@/components/Act3/Act3Record';
+import Act4Record from '@/components/Act4/Act4Record';
 import Act5Record from '@/components/Act5/Act5Record';
+import Act6Record from '@/components/Act6/Act6Record';
 import Act7Record from '@/components/Act7/Act7Record';
 import Frame from '@/components/Frame';
 import { Colors } from '@/theme/theme';
 import { useLocalSearchParams } from 'expo-router';
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
-import Act6Record from '../../components/Act6/Act6Record';
 
 export default function ActivityRecord() {
     const { id } = useLocalSearchParams<{ id: string }>();
-    const activity = ACTIVITY_DATA[id]
+    const activity = ACTIVITY_DATA[id];
 
-    function renderAct(){
+    function renderAct() {
         switch (id) {
-            case "1":
-                return
-            case "2":
-                return
-            case "3":
-                return
-            case "4":
-                return
-            case "5":
-                return(
-                    <Act5Record/>
-                )
-            case "6":
-                return(
-                    <Act6Record/>
-                )
-            case "7": 
-                return(
-                    <Act7Record/>
-                )
+            case '1':
+                return <Act1Record />;
+            case '2':
+                return <Act2Record />;
+            case '3':
+                return <Act3Record />;
+            case '4':
+                return <Act4Record />;
+            case '5':
+                return <Act5Record />;
+            case '6':
+                return <Act6Record />;
+            case '7':
+                return <Act7Record />;
         }
     }
 
     return (
-         <Frame title={activity.title} prevPagePath={`/activity/${activity.id}`}>
+        <Frame title={activity.title} prevPagePath={`/activity/${activity.id}`}>
             <View>
                 {renderAct()}
             </View>
-         </Frame>
-    )
+        </Frame>
+    );
 }
 
-const getStyles = (colors: Colors) => StyleSheet.create({
-   
-});
+const getStyles = (colors: Colors) => StyleSheet.create({});
