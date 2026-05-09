@@ -1,3 +1,4 @@
+import { ACTIVITY_DATA } from "@/activityData/activityData";
 import { db } from "@/FirebaseConfig";
 import { ActivityAttempt, activityAttemptData, Tables } from "@/types/dbTypes";
 import { collection, deleteDoc, doc, getDocs, query, setDoc, updateDoc, where } from "firebase/firestore";
@@ -112,5 +113,19 @@ export async function deleteAllDraftAttempts(): Promise<{ success: boolean; dele
         return { success: true, deletedCount: snap.docs.length };
     } catch (error) {
         return { success: false, message: (error as Error).message };
+    }
+}
+
+export async function getAllAcitivityAttempts(): Promise<{success: boolean, data: ActivityAttempt[][]}>{
+    try {
+        const results = await Promise.all(
+            Object.keys(ACTIVITY_DATA).map((id) =>
+                getActivityAttemptsForActivity(id)
+            )
+        );
+        return {success: true, data: results}
+        
+    } catch{
+        return {success: false, data: []}
     }
 }

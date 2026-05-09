@@ -9,8 +9,8 @@ import { roundToTwo } from '@/util/util'
 import { useRouter } from 'expo-router'
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import ActRatingComment from '../ActRatingComment'
-import Button from '../Button'
+import ActRatingComment from '../../ActRatingComment'
+import Button from '../../Button'
 import StretchTracker from './StretchTracker'
 
 export default function Act5Record() {

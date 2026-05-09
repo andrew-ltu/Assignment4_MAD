@@ -37,3 +37,11 @@ export type Activity7Data = {
         activityBPM: number,
     }[]
 }
+
+export type ActivitySummary = {
+    id: string;
+    title: string;
+    attempts: number;
+    topScore: number;
+    topTeamScore: number;
+};

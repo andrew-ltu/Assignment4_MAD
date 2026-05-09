@@ -5,8 +5,8 @@ import { Colors } from '@/theme/theme';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ActRatingComment from '../ActRatingComment';
-import Button from '../Button';
+import ActRatingComment from '../../ActRatingComment';
+import Button from '../../Button';
 
 export default function Act1Record() {
     const colors = useColorPalette();

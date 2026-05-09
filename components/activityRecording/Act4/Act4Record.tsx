@@ -5,10 +5,10 @@ import { Colors } from '@/theme/theme';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ActRatingComment from '../ActRatingComment';
-import Button from '../Button';
+import ActRatingComment from '../../ActRatingComment';
+import Button from '../../Button';
 
-export default function Act3Record() {
+export default function Act4Record() {
     const colors = useColorPalette();
     const styles = getStyles(colors);
     const router = useRouter();
@@ -42,10 +42,10 @@ export default function Act3Record() {
                 <View style={styles.sectionView}>
                     <Text style={styles.titleText}>Instructions</Text>
                     <Text style={styles.subText}>
-                        1. Stand a piece of paper upright on a table.{'\n\n'}
-                        2. Fan air from 30 cm away and observe the movement.{'\n\n'}
-                        3. Repeat with different fan designs and distances — 15 cm, 30 cm, and 45 cm.{'\n\n'}
-                        4. Repeat the same tests using cardboard instead of paper.{'\n\n'}
+                        1. Build an anti-vibration layer by folding paper or cardboard.{'\n\n'}
+                        2. Place a flat cardboard platform on top of your structure.{'\n\n'}
+                        3. Place the phone in the centre and observe movement during vibration.{'\n\n'}
+                        4. Modify the structure to reduce movement by adding more pillars or folds.{'\n\n'}
                         5. When finished, tap Next to record your results.
                     </Text>
                     <Button
@@ -59,7 +59,7 @@ export default function Act3Record() {
                 <View style={styles.sectionView}>
                     <Text style={styles.titleText}>Results</Text>
                     <Text style={styles.subText}>
-                        Rate the activity and leave a comment about which fan design worked best.
+                        Rate the activity and leave a comment about how well your structure handled vibration.
                     </Text>
                     <ActRatingComment
                         loading={loading}
