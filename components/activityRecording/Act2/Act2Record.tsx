@@ -5,10 +5,10 @@ import { Colors } from '@/theme/theme';
 import { useRouter } from 'expo-router';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ActRatingComment from '../ActRatingComment';
-import Button from '../Button';
+import ActRatingComment from '../../ActRatingComment';
+import Button from '../../Button';
 
-export default function Act4Record() {
+export default function Act2Record() {
     const colors = useColorPalette();
     const styles = getStyles(colors);
     const router = useRouter();
@@ -42,11 +42,10 @@ export default function Act4Record() {
                 <View style={styles.sectionView}>
                     <Text style={styles.titleText}>Instructions</Text>
                     <Text style={styles.subText}>
-                        1. Build an anti-vibration layer by folding paper or cardboard.{'\n\n'}
-                        2. Place a flat cardboard platform on top of your structure.{'\n\n'}
-                        3. Place the phone in the centre and observe movement during vibration.{'\n\n'}
-                        4. Modify the structure to reduce movement by adding more pillars or folds.{'\n\n'}
-                        5. When finished, tap Next to record your results.
+                        1. Measure noise from different actions — dropping objects, talking, walking, and stamping your feet.{'\n\n'}
+                        2. Record sound levels and note the location for each measurement.{'\n\n'}
+                        3. Map loud and quiet zones around the classroom.{'\n\n'}
+                        4. When finished, tap Next to record your results.
                     </Text>
                     <Button
                         label="Next"
@@ -59,7 +58,7 @@ export default function Act4Record() {
                 <View style={styles.sectionView}>
                     <Text style={styles.titleText}>Results</Text>
                     <Text style={styles.subText}>
-                        Rate the activity and leave a comment about how well your structure handled vibration.
+                        Rate the activity and leave a comment about the sound levels you discovered.
                     </Text>
                     <ActRatingComment
                         loading={loading}

@@ -1,11 +1,11 @@
 import { ACTIVITY_DATA } from '@/activityData/activityData';
-import Act1Record from '@/components/Act1/Act1Record';
-import Act2Record from '@/components/Act2/Act2Record';
-import Act3Record from '@/components/Act3/Act3Record';
-import Act4Record from '@/components/Act4/Act4Record';
-import Act5Record from '@/components/Act5/Act5Record';
-import Act6Record from '@/components/Act6/Act6Record';
-import Act7Record from '@/components/Act7/Act7Record';
+import Act1Record from '@/components/activityRecording/Act1/Act1Record';
+import Act2Record from '@/components/activityRecording/Act2/Act2Record';
+import Act3Record from '@/components/activityRecording/Act3/Act3Record';
+import Act4Record from '@/components/activityRecording/Act4/Act4Record';
+import Act5Record from '@/components/activityRecording/Act5/Act5Record';
+import Act6Record from '@/components/activityRecording/Act6/Act6Record';
+import Act7Record from '@/components/activityRecording/Act7/Act7Record';
 import Frame from '@/components/Frame';
 import { Colors } from '@/theme/theme';
 import { useLocalSearchParams } from 'expo-router';

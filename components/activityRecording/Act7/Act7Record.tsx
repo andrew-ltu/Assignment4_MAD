@@ -9,8 +9,8 @@ import { Activity7Data } from '@/types/activityTypes';
 import { useRouter } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import ActRatingComment from '../ActRatingComment';
-import Button from '../Button';
+import ActRatingComment from '../../ActRatingComment';
+import Button from '../../Button';
 import BreathingTracker from './BreathingTracker';
 
 export default function Act7Record() {
